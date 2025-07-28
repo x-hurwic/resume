@@ -1,0 +1,62 @@
+@use '@angular/material' as mat
+@use './styles/lines'
+@use './styles/font'
+@use './styles/margin'
+@use './styles/colors' as colors
+
+html
+  color-scheme: light dark
+  @include mat.theme(( color: mat.$violet-palette, typography: Roboto, density: 0))
+
+:root
+  @include mat.progress-bar-overrides((
+    active-indicator-color: colors.$neutral,
+    track-color: colors.$neutral-dark,
+  ))
+
+html,
+body
+  width: 21cm
+  max-width: 21cm
+  height: 29.7cm
+  max-height: 29.7cm
+
+h4
+  color: colors.$primary
+  margin-bottom: 0
+  font-size: larger
+
+  & > i
+    color: colors.$neutral
+    font-size: medium
+    font-weight: normal
+
+.date
+    color: colors.$neutral-dark
+    font-style: italic
+.zone-title
+  font-size: large
+  font-weight: 600
+  text-transform: uppercase
+
+  &-main
+    color: colors.$primary-dark
+
+  &-side
+    color: colors.$neutral
+    text-align: center
+
+.subject
+  color: colors.$neutral-dark
+  font-weight: bold
+
+.f-s-c
+  display: flex
+  justify-content: flex-start
+  align-items: center
+
+.m-15
+  margin: 15px
+
+.mr-5
+  margin-right: 5px

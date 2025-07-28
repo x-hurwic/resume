@@ -1,0 +1,8 @@
+<h3 class="zone-title zone-title-side">COMPÉTENCES</h3>
+
+<div class="skill-container">
+  @for (skill of skills; track $index) {
+    <span class="capitalize">{{skill.name}}</span>
+    <mat-progress-bar class="m-b-5" mode="determinate" value="{{skill.percent}}"/>
+  }
+</div>

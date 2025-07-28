@@ -1,0 +1,7 @@
+<h3 class="zone-title zone-title-side">Savoir être</h3>
+<mat-chip-listbox aria-label="Liste des compétences">
+  @for (howToBe of howToBes; track howToBe) {
+    <mat-chip-option selected>{{howToBe}}</mat-chip-option>
+  }
+</mat-chip-listbox>
+

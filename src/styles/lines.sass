@@ -1,0 +1,31 @@
+@use './colors' as colors
+
+.puce-container
+  border-left: 2px dashed colors.$neutral
+  padding: 0
+  margin: 0 19px
+
+.puce
+  display: flex
+  align-items: center
+  margin: 0
+
+  &::after
+    content: ''
+    display: flex
+    background-color: colors.$primary
+    width: 8px
+    min-width: 8px
+    aspect-ratio: 1
+    order: -1
+    margin-right: 8px
+    border-radius: 100%
+    transform: translateX(calc(-50% + 1px))
+
+.puce::before
+  content: ''
+  display: flex
+  border-top: 2px dashed colors.$neutral
+  width: 20px
+  min-width: 20px
+  order: -2

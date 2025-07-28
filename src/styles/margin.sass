@@ -1,0 +1,13 @@
+$directions: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left
+);
+
+$values: 0, 5, 10, 15, 20, 25, 30;
+
+@each $abbr, $full in $directions
+  @each $val in $values
+    .m-#{$abbr}-#{$val}
+      margin-#{$full}: #{$val}px
