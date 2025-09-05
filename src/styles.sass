@@ -20,6 +20,7 @@ body
   max-width: 21cm
   height: 29.7cm
   max-height: 29.7cm
+  margin: 0
 
 h4
   color: colors.$primary
@@ -60,3 +61,7 @@ h4
 
 .mr-5
   margin-right: 5px
+
+@media print
+  body
+    -webkit-print-color-adjust: exact !important
